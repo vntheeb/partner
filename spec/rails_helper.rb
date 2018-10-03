@@ -55,9 +55,7 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
-  # Rspec setup
-  RSpec.configure do |config|
-    # sign_in helpers for feature specs
-    config.include Devise::Test::IntegrationHelpers, type: :feature
-  end
+  # sign_in helpers for feature specs
+  config.include Devise::Test::IntegrationHelpers, type: :feature
+  config.include FactoryBot::Syntax::Methods
 end
